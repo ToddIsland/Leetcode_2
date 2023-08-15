@@ -8,7 +8,7 @@ class Solution:
             while s[r] in store:
                 store.remove(s[l])
                 l += 1
-            dict[s[r]] = r
+            store.add(s[r])
             res = max(r - l + 1, res)
 
         return res
